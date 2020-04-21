@@ -1,0 +1,33 @@
+09957007	資工2A	簡偉智
+[SERVER]
+1.	建立連線
+	我寫在connect這個function
+	做的事是：
+	1.神秘的WSAStartup
+	2.設定TCP
+	3.socket (open!)
+	4.bind
+	5.Listen
+2.	讀字串
+	在迴圈裡
+	先從client接收字串(recv)
+	如果輸入是0就結束
+	然後將字串分析
+	得到 a +-*/ b
+	將答案算出後
+	送回去client(send)
+
+[CLIENT]
+1.	建立連線
+	也是在connect這個function
+	做的事是：
+	1.神秘的WSAStartup
+	2.gethostbyname 設定IP
+	3.設定TCP
+	4.socket (open!)
+	5.connect
+2.	輸入字串
+	將字串送去server(sned)
+	如果輸入是0就結束
+	然後把答案從server端收回來
+	印出答案
